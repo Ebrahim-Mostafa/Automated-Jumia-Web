@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Cross Browser Testing" parallel="tests" thread-count="2">
+
+    <listeners>
+        <listener class-name="pages.Listeners"/>
+    </listeners>
+
+    <test name="Test On Chrome">
+        <parameter name="Browser" value="Chrome"></parameter>
+        <classes>
+            <class name="Login.CreatAccTest"/>
+            <class name="Login.SearchTest"/>
+        </classes>
+    </test>
+
+    <test name="Test On FireFox">
+        <parameter name="Browser" value="FireFox"></parameter>
+        <classes>
+            <class name="Login.CreatAccTest"/>
+            <class name="Login.SearchTest"/>
+        </classes>
+    </test>
+
+    <test name="Test On EdgeDriver">
+        <parameter name="Browser" value="EdgeDriver"></parameter>
+        <classes>
+            <class name="Login.CreatAccTest"/>
+            <class name="Login.SearchTest"/>
+        </classes>
+    </test>
+
+    <test name="Test On IE">
+        <parameter name="Browser" value="IE"></parameter>
+        <classes>
+            <class name="Login.CreatAccTest"/>
+            <class name="Login.SearchTest"/>
+        </classes>
+    </test>
+
+    <test name="Test On Opera">
+        <parameter name="Browser" value="Opera"></parameter>
+        <classes>
+            <class name="pages.CreateAccPage"/>
+            <class name="pages.SearchPage"/>
+        </classes>
+    </test>
+</suite>
